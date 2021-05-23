@@ -15,5 +15,14 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.GATSBY_STRAPI_API_URL,
+        queryLimit: 1000, // Defaults to 100
+        collectionTypes: ["project"],
+        singleTypes: [],
+      },
+    },
   ],
 };
